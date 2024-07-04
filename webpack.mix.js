@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,8 +10,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .js('resources/js/plugin/jquery.js', 'public/js/plugin')
-    .js('resources/js/plugin/jquery.mask.js', 'public/js/plugin')
-    .js('resources/js/plugin/jquery-ui.min.js', 'public/js/plugin');
+mix     .js('resources/js/app.js', 'public/js')
+        .sass('resources/sass/app.scss', 'public/css')
+        .js('resources/js/plugin/jquery.js', 'public/js/plugin')
+        .js('resources/js/plugin/jquery.mask.js', 'public/js/plugin')
+        .js('resources/js/plugin/jquery-ui.min.js', 'public/js/plugin')
+        .sourceMaps()
+        .vue({ version : 2});
